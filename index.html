@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
     <title>Weather-app-5000</title>
 </head>
 <body>
@@ -20,7 +22,14 @@
         </button>
       </div> 
       <div>
-        <h2>Weather Display</h2>
+        <h1>Todays Forecast</h1>
+        <h2 id="location"></h3>
+        <h3 id="todayDisplay"></h2>
+        <p id="todaysWeather"></p>
+      </div>
+      <div>
+        <h1>Upcoming Forecast</h1>
+        <ul id="upcomingWeather"></ul>
       </div>
     <script src="./assets/js/script.js"></script>
 </body>
