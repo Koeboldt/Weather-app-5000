@@ -7,7 +7,7 @@ upcomingWeatherEl = document.querySelector('#upcomingWeather')
 var today = dayjs()
 
 function useGeocoding(location){
-    var geocodingApi = 'http://api.openweathermap.org/geo/1.0/direct?q='+ location +'&limit=5&appid=e3ae26a5faf93c7ec8925eb09f4c0f8f'
+    var geocodingApi = 'https://api.openweathermap.org/geo/1.0/direct?q='+ location +'&limit=5&appid=e3ae26a5faf93c7ec8925eb09f4c0f8f'
     fetch(geocodingApi).then(function (response){
         if (response.ok) {
             response.json().then(function(data){
@@ -39,7 +39,7 @@ function getCurrentWeather(lat, long){
 }
 
 function getForecastWeather(lat, long){
-    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid=e3ae26a5faf93c7ec8925eb09f4c0f8f&units=imperial'
+    var weatherApi = 'https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid=e3ae26a5faf93c7ec8925eb09f4c0f8f&units=imperial'
     fetch(weatherApi).then(function (response){
         if (response.ok) {
             response.json().then(function(data){
